@@ -115,7 +115,5 @@ Include system configuration in the report (CPU, RAM, OS, Docker).
 
 ## License and disclaimer
 
-This is a research prototype provided for reproducibility of the associated FLICS submission. It is not a production security product.
-``
-::contentReference[oaicite:0]{index=0}
+> This is a research prototype provided for reproducibility of the associated FLICS submission. It is not a production security product.
 
