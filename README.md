@@ -24,8 +24,6 @@ The prototype implements an **admission gateway** at the **session interface bou
 - **Figure 1 (end-to-end):** session admission layer in front of the FL workflow  
 - **Figure 2 (zoom):** setup/issuance (stateful) vs runtime admission (stateless per request)
 
-Place figures in `docs/figures/` (or link them here once committed).
-
 ---
 
 ## Session interface and operations
@@ -75,8 +73,6 @@ This PoC is intended to be runnable end-to-end with scripted tests that exercise
 
 The tests print the decision and point to the emitted evidence record.
 
-> Add the exact commands once the refactor is finalized (scripts typically live in `tests/` or `flics/scripts/`).
-
 ---
 
 ## Performance sanity check (microbench)
@@ -86,8 +82,6 @@ FLICS reviewers commonly ask for overhead. The prototype includes a microbench t
 - PoP verification latency
 - capability match latency
 - full admission check latency (token + PoP + match)
-
-Include system configuration in the report (CPU, RAM, OS, Docker).
 
 ---
 
