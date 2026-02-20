@@ -1,0 +1,9 @@
+{
+  "org://HospitalA": {
+    "EVEN_ONLY": "capset:predictor_even",
+    "ODD_PLUS":  "capset:predictor_odd_plus"
+  },
+  "org://HospitalB": {
+    "ODD_ONLY":  "capset:predictor_odd"
+  }
+}

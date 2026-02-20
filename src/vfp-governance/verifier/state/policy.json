@@ -1,0 +1,75 @@
+{
+  "version": "1.1",
+  "ops": {
+    "view_demographics_deid": {
+      "resource": "DEMOGRAPHICS",
+      "action": "read",
+      "flags": { "pii": false }
+    },
+    "view_timelines_deid": {
+      "resource": "TIMELINES",
+      "action": "read",
+      "flags": { "pii": false }
+    },
+    "train_petct_A": {
+      "resource": "PET-CT",
+      "action": "train",
+      "purpose": "model_training",
+      "scope": { "cohort": ["A"] }
+    },
+    "read_tumor_agg_nopii": {
+      "resource": "TUMOR_MEASUREMENTS",
+      "action": "read",
+      "flags": { "agg": "aggregated", "pii": false, "contact": false }
+    },
+    "export_model_params": {
+      "resource": "MODEL_PARAMS",
+      "action": "export"
+    },
+    "predict_petct_even_only": {
+  "resource": "PET-CT",
+  "action": "read",
+  "purpose": "model_prediction",
+  "scope": { "cohort": ["EVEN_ONLY"] }
+},
+"predict_petct_odd_only": {
+  "resource": "PET-CT",
+  "action": "read",
+  "purpose": "model_prediction",
+  "scope": { "cohort": ["ODD_ONLY"] }
+},
+"predict_petct_odd_plus": {
+  "resource": "PET-CT",
+  "action": "read",
+  "purpose": "model_prediction",
+  "scope": { "cohort": ["ODD_PLUS"] }
+}
+  },
+  "cap_profiles": {
+    "capset:research_nurse": { "cap": ["view_demographics_deid", "view_timelines_deid"] },
+    "capset:data_scientist": { "cap": ["read_tumor_agg_nopii"] },
+    "capset:trainer_A":      { "cap": ["train_petct_A"] },
+    "capset:egress_safe":    { "cap": ["export_model_params"] },
+    "capset:predictor_even": { "cap": ["predict_petct_even_only"] },
+    "capset:predictor_odd":  { "cap": ["predict_petct_odd_only"] },
+    "capset:predictor_odd_plus": { "cap": ["predict_petct_odd_plus"] }
+
+  },
+  
+  "cap_profiles_default": [
+    "capset:trainer_A",
+    "capset:data_scientist"
+  ],
+  "caveats": {
+    "audience": "svc:fl-gateway:eu",
+    "prohibitions": ["no_export_raw"]
+  },
+  "meta": {
+    "policy_id": "POL-IMAGING-2025H1",
+    "manifest_id": "gov-manifest-2025Q1",
+    "notes": [
+      "EU↔US DPA handled outside ECT (attestation/deployment routing)",
+      "Data quality >= 0.95 enforced upstream, not by gatekeeper"
+    ]
+  }
+}
