@@ -14,6 +14,10 @@ The prototype implements an **admission gateway** at the **session interface bou
 > Provenance: the implementation is extracted from a broader federated-computing testbed. this README presents an FL-native view and provides a terminology mapping.
 
 ---
+## Documentation
+For more details, refer to the accompanying [paper](doc/FLICS26_paper.pdf) and [slide deck](doc/FLICS26_slides.pdf).
+
+---
 
 ## What this PoC demonstrates
 
