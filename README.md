@@ -12,9 +12,9 @@
 The prototype implements an **admission gateway** at the **session interface boundary** using (i) **signed session capability tokens**, (ii) **request-bound proof-of-possession (PoP)**, and (iii) **structured decision evidence** (ALLOW/DENY + reason) emitted per request.
 
 > Provenance: the implementation is extracted from a broader federated-computing testbed. this README presents an FL-native view and provides a terminology mapping.
-
+<p align="center">
 <img src="doc/slide_0.png" width="75%">
-
+</p>
 ---
 ## Documentation
 For more details, refer to the accompanying [paper](doc/FLICS26_paper.pdf) and [slide deck](doc/FLICS26_slides.pdf).
