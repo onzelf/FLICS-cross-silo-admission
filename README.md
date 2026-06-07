@@ -15,6 +15,8 @@ The prototype implements an **admission gateway** at the **session interface bou
 <p align="center">
 <img src="doc/slide_0.png" width="75%">
 </p>
+
+
 ---
 ## Documentation
 For more details, refer to the accompanying [paper](doc/FLICS26_paper.pdf) and [slide deck](doc/FLICS26_slides.pdf).
